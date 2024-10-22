@@ -2,13 +2,19 @@
 
 namespace NewModule10.Task1
 {
-     interface ICalculator                   
+    /// <summary>
+    /// Интерфейс ICalculator
+    /// </summary>
+    interface ICalculator                   
     {
         double NumberOne();
         double NumberTwo();
         double Result();
     }
 
+    /// <summary>
+    /// Производный класс Calculator
+    /// </summary>
     public class Calculator : ICalculator          
     {
         double numberOne;
@@ -34,7 +40,13 @@ namespace NewModule10.Task1
         {
             return resultInches;
         }
-
+        
+        /// <summary>
+        /// Ввод данных
+        /// Проверка корректности ввода знака + (try/catch)
+        /// Расчет
+        /// Вывод на консоль
+        /// </summary>
         public static void Main()
         {
             Console.WriteLine("Введите первое число");
@@ -45,7 +57,7 @@ namespace NewModule10.Task1
             {
                 try
                 {
-                    DataEnter.DEnter();
+                    DataEnter.PlusEnter();
                     bad = false;
                 }
                 catch (Exception ex)
@@ -62,9 +74,9 @@ namespace NewModule10.Task1
             Calculator calc = new Calculator(x, y, summ);
             ICalculator calculator = calc;
 
-            Console.WriteLine("Первое число: {0}", calculator.NumberOne());
-            Console.WriteLine("Второе число: {0}", calculator.NumberTwo());
-            Console.WriteLine("Сумма чисел: {0}", calculator.Result());
+            Console.WriteLine("\nПервое число:\t {0}", calculator.NumberOne());
+            Console.WriteLine("Второе число:\t {0}", calculator.NumberTwo());
+            Console.WriteLine("Сумма чисел:\t {0}", calculator.Result());
         }
     }
 }

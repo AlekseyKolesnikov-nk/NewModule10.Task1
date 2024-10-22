@@ -8,7 +8,7 @@ namespace NewModule10.Task1
 {
     internal class DataEnter
     {
-        public static void DEnter()
+        public static void PlusEnter()
         {
             Console.WriteLine("Введите знак сложения - '+'");
             char oper = Convert.ToChar(Console.ReadLine());
