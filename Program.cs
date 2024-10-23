@@ -62,7 +62,12 @@ namespace NewModule10.Task1
                 }
                 catch (Exception ex)
                 {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
                     Console.WriteLine("Ошибка ввода");
+                    Console.BackgroundColor = ConsoleColor.Black;
+                    Console.ForegroundColor = ConsoleColor.White;
+
                 };
             }
 
