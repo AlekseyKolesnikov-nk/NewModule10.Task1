@@ -60,14 +60,9 @@ namespace NewModule10.Task1
                     DataEnter.PlusEnter();
                     bad = false;
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    Console.WriteLine("Ошибка ввода");
-                    Console.BackgroundColor = ConsoleColor.Black;
-                    Console.ForegroundColor = ConsoleColor.White;
-
+                    Error.OnError();
                 };
             }
 
